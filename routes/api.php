@@ -14,7 +14,6 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
 // Public: Anyone can see published jobs (Optional choice, but usually better if public)
-// If you want to force login to see jobs, move this into the Protected group below.
 Route::get('/jobs', [JobPostController::class, 'index']); 
 
 
@@ -34,7 +33,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/jobs/{id}/applications', [JobPostController::class, 'getApplications']); // View CVs
 
     // --- Freelancer Routes ---
-    // We haven't created ApplicationController yet, but here is the route for it
     Route::post('/applications', [ApplicationController::class, 'store']); // Apply (Upload CV)
 
 });
