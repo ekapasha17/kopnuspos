@@ -31,7 +31,6 @@ class ApplicationController extends Controller
         }
 
         // 4. Duplicate Check
-        // (We have a DB constraint, but a clean check here gives a better error message)
         $exists = Application::where('job_post_id', $request->job_post_id)
                              ->where('freelancer_id', $user->id)
                              ->exists();
