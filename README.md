@@ -151,6 +151,18 @@ All requests should have the header: `Accept: application/json`
 
 ---
 
+## System Design
+
+Here is the visual representation of the system logic and database structure.
+
+### Flowchart
+
+![User Flowchart](docs/images/kopnuspos_flowchart.png)
+
+### Database Schema (ERD)
+
+![ER Diagram](docs/images/kopnuspos_erd.png)
+
 ### Author
 
 **Aprilian Adha Eka Pasha**
